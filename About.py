@@ -26,7 +26,7 @@ def app():
     # Creator 1
     with col1:
         st.write("**Creator 1:**")
-        st.image("my_spc_project/images/creater1.png", width=200)
+        st.image("images/creater1.png", width=200)
         st.write("- **Name:** Neel Sheth")
         st.write("- **Email:** neelsheth708@gmail.com")
         st.write("- [LinkedIn](https://www.linkedin.com/creator1)")
@@ -34,7 +34,7 @@ def app():
     # Creator 2
     with col2:
         st.write("**Creator 2:**")
-        st.image("my_spc_project/images/creater1.png", width=200)
+        st.image("images/creater1.png", width=200)
         st.write("- **Name:** Creator 2 Name")
         st.write("- **Email:** creator2@example.com")
         st.write("- [LinkedIn](https://www.linkedin.com/creator2)")
