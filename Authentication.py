@@ -17,7 +17,7 @@ try:
     db = client['authentication']
     collection = db['id']
 except:
-  st.warning("Network Issue")
+  st.warning("Network Warning")
 # Function to generate a random password
 def generate_password():
     characters = string.ascii_letters + string.digits
@@ -36,6 +36,23 @@ def send_email(email, password):
     server = smtplib.SMTP('smtp.gmail.com',587)
     server.starttls()
     
+
+    # Login to your Gmail account
+    server.login(sender_email,"jddq ccsh ujpw hlkf")
+    try:
+        server.sendmail(sender_email,receiver_email,text)
+    except:
+       st.warning("OOPs there is error!")
+    
+    server.quit()
+#Function for congrats email
+def send_email(email, subject, body):
+    sender_email = "spc.ec2025@gmail.com"
+    receiver_email = email
+    text = f"Subject: {subject}\n\n{body}"
+
+    server = smtplib.SMTP('smtp.gmail.com',587)
+    server.starttls()
 
     # Login to your Gmail account
     server.login(sender_email,"jddq ccsh ujpw hlkf")
@@ -81,7 +98,7 @@ def app():
             else:
                 st.error("Invalid Email or Password")
     elif selection == "Sign Up":
-        # Sign Up
+          # Sign Up
         st.subheader("Sign Up")
         new_email = st.text_input("Email")
         new_username = st.text_input("Username")
@@ -103,6 +120,13 @@ def app():
                     else:
                         new_user = {"email": new_email, "username": new_username, "password": new_password}
                         collection.insert_one(new_user)
+                        
+                        # Send congratulatory email
+                        subject = "Welcome  to SPC_ECE_WEB"
+                        body = f"Congratulations! You have successfully signed up for SPC EC Web with:\nUsername: {new_username}\nPassword: {new_password}\n\nPlease do not share this information with anyone."
+
+                        send_email(new_email, subject, body)
+                        
                         st.success("Account created successfully")
     else:
         # Forgot Password
