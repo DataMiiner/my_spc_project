@@ -82,7 +82,7 @@ def app():
                 # Download CSV button
                 csv_data = df.reset_index().to_csv(index=False)
                 st.download_button(
-                    label="Download Unoplaced Students Records",
+                    label="Download Unplaced Students Records",
                     data=csv_data,
                     file_name=f"Unplaced_{st.session_state['year']}.csv",
                     mime="text/csv"
