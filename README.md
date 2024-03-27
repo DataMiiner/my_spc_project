@@ -86,8 +86,9 @@ link :  https://spc-ece-record-web.streamlit.app/
 
 ![image](https://github.com/NeelSheth-Developer/Student-Internship-and-Placement-Record-System/assets/149947298/a4d74426-60a8-4c33-a10e-5e00799a53db)
 <hr>
+<br>
 
-![image](https://github.com/NeelSheth-Developer/Student-Internship-and-Placement-Record-System/assets/149947298/963abd19-8cf5-46f1-924e-225cad126348)
+![image](https://github.com/NeelSheth-Developer/Student-Internship-and-Placement-Record-System/assets/149947298/a620e8a9-1811-4c6f-bc54-012bf10a1e8e)
 
 <h5>Company Statistics</h5>
 
